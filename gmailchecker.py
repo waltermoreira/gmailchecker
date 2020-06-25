@@ -69,7 +69,7 @@ def notify(title: str, summary: str, author: str) -> None:
     )
 
 
-def main():
+def main() -> None:
     status = "📬"
     shown = get_shown()
     # noinspection PyBroadException
@@ -82,7 +82,7 @@ def main():
         print(f"{status} !")
         return
 
-    def f():
+    def f() -> Iterator[str]:
         for an_id, title, summary, author in ids:
             if an_id not in shown:
                 notify(title, summary, author)
