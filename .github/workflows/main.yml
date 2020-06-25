@@ -31,3 +31,12 @@ jobs:
       run: |
         echo Add other actions to build,
         echo test, and deploy your project.
+
+    - name: Test docker action
+      uses: ./actions
+      id: test
+      with:
+        who-to-greet: 'foo'
+
+    - name: Get the output time
+      run: echo "Output was ${{ steps.test.outputs.time }}"
