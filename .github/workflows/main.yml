@@ -30,6 +30,9 @@ jobs:
         echo Add other actions to build,
         echo test, and deploy your project.
 
+    - name: vars
+      run: echo "---> ${{ github.event.pull_request.number }}"
+
     - name: Test docker action
       uses: ./actions
       id: test
