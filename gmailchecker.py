@@ -58,15 +58,7 @@ def save_shown(ids: List[str]) -> None:
 
 # noinspection PyUnusedLocal
 def notify(title: str, summary: str, author: str) -> None:
-    subprocess.run(
-        [
-            "/usr/local/bin/terminal-notifier",
-            "-message",
-            title,
-            "-title",
-            author,
-        ]
-    )
+    return
 
 
 def main() -> None:
